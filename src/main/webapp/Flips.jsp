@@ -53,3 +53,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss Result</title>
+</head>
+<body>
+    <h1>Coin Toss Result</h1>
+    <p>Material: <%= material %></p>
+    <p>Coin Height: <%= height %> mm</p>
+    <p>Coin Diameter: <%= diameter %> mm</p>
+    <p>Release Height: <%= releaseHeight %> meters</p>
+    <p>Angle of Projection: <%= angleDegrees %> degrees</p>
+    <p>Initial Side: <%= initialSide %></p>
+    <p>Custom Motor Power: <%= motorPower %> (force)</p>
+    <!-- Add other parameters and calculations here -->
+
+    <!-- Determine the final coin side -->
+    <%
+        String finalOutcome = (Math.random() < 0.5) ? "Head" : "Tail";
+        if (initialSide.equals(finalOutcome)) {
+            finalOutcome = "You got " + finalOutcome;
+        } else {
+            finalOutcome = "You got the opposite side (" + finalOutcome + ")";
+        }
+    %>
+    <p><%= finalOutcome %></p>
+</body>
+</html>
