@@ -49,7 +49,7 @@
         <input type="number" id="motorPower" name="motorPower"><br>
 
         <!-- Calculate Weight Button -->
-        <input type="submit" value="Calculate Weight">
+        <input type="submit" value="Position">
     </form>
 </body>
 </html>
